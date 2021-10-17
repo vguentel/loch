@@ -1,6 +1,6 @@
 local lochEntity = {
-    name = "loch",
     type = "container",
+    name = "loch",
     minable = {
         mining_time = 30.0,
         results = {},
@@ -11,13 +11,15 @@ local lochEntity = {
     picture = nil,
     inventory_size = 48,
     picture = {
-        filename = "__loch__/graphics/loch.png",
-        size = 32
+        filename = "__loch__/graphics/loch_sprite.png",
+        size = 32,
+        shift = util.by_pixel(0, -0.5),
     },
     selection_box = {
         {-0.5, -0.5},
         {0.5, 0.5}
     },
+    collision_box = {{-0.35, -0.35}, {0.35, 0.35}},
     max_health = 350
 }
 data:extend{lochEntity}
